@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <nav class="hero">
+                <ul class="topnav">
+                    <li class="hideOnMobile"><a href="#">History</a></li>
+                    <li class="hideOnMobile"><a href="#">Culture</a></li>
+                    <li class="hideOnMobile"><a href="#">Areas</a></li>
+                    <li class="hideOnMobile"><a href="#about">About us</a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href=#><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+                <ul class="sidenav">
+                    <li onclick=hideSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Areas</a></li>
+                    <li><a href="#about">About us</a></li>
+                </ul>
+            </nav>
+            <div class="hero-text">
+                    <p class="logo">HA NOI</p>
+                    <p class="p2">______________________________</p>
+                    <p class="dscrpt">Get to know everything about the capital city of Viet Nam</p>
+            </div>
+        </div>
+        <div class="background">
+            <div class="content">
+                <h1>Vietnam's Cultural Heritage</h1>
+                <button id="learnMoreButton">Want to learn more?</button>
+        
+                <div id="extraContent" class="hidden">
+                    <div class="center_box">
+                        <div class="image-container">
+                            <img src="Screenshot 2024-06-24 002543.png" alt="Heritage Image" class="center-image">
+                            <div class="text-overlay">
+                                <button id="audioButton" class="circle-button">▶</button>
+                                <p class="description">Vietnamese culture is a vibrant tapestry of ancient traditions, colorful festivals, and rich culinary heritage, blending influences from China, France, and its own diverse ethnic groups. It showcases the unique harmony between historical depth and modern dynamism.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio id="audioPlayer" src="/audio2/rumo-ao-sol-13162.mp3"></audio>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+        function showSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='flex'
+        }
+
+        function hideSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='none'
+        }
+
+        $(window).scroll(function(){
+            if($(window).scrollTop()){
+                $("nav").addClass("black");
+            }
+            else{
+                $("nav").removeClass("black");
+            }
+        });
+
+        document.getElementById('learnMoreButton').addEventListener('click', () => {
+            document.getElementById('extraContent').classList.toggle('hidden');
+        });
+
+        const audioButton = document.getElementById('audioButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                audioButton.textContent = '⏸️';
+            } else {
+                audioPlayer.pause();
+                audioButton.textContent = '▶️';
+            }
+    
+});
+    </script>
+</body>
+</html>
