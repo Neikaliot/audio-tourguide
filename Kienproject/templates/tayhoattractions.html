@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Tay Ho's attractions{% endblock %}
+{% block top %}
+<div class="top">
+    <div class="hero-text">
+        <p class="logo" id="logo" onclick="window.location.href='tayho'" style="cursor: pointer;">TAY HO</p>
+        <audio id="song">
+            <source src="audio/hanoian.mp3" type="audio/mpeg">
+        </audio>
+        <div id="scroll" onclick="scrolldown()">
+            <div class="play" onclick="playPause()" ><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block category %}CATEGORY: TAY HO ATTRACTIONS{% endblock %}
+{% block content %}
+<p><h1>Explore Tây Hồ District: A Journey Through Hanoi's Scenic and Culinary Highlights
+</h1></p>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://cdn.britannica.com/13/84813-050-0F92B7CD/Turtle-Island-Hanoi-Lake-Hoan-Kiem.jpg">
+            </div>
+            <p>Tây Hồ district, one of Hanoi's most vibrant areas, offers stunning lake views, rich history, and an array of delicious street food. It’s a perfect blend of culture, nature, and local cuisine that invites you to discover the best of what Hanoi has to offer.</p>
+            <div class="transcript">
+                <h2 class="subtitle">West Lake (Hồ Tây)</h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://www.myhanoitours.com/wp-content/uploads/2017/06/Hanoi-in-the-past-days.jpg">
+            </div>
+            <p>Begin your exploration with a leisurely walk around West Lake, the largest freshwater lake in Hanoi. Whether you're walking, biking, or simply enjoying the view, the scenery is especially breathtaking during sunset. You’ll come across Tran Quoc Pagoda, a 1,500-year-old Buddhist temple that sits serenely on a small island in the lake. This ancient pagoda is a must-visit for those interested in Vietnam's spiritual heritage.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Phủ Tây Hồ (West Lake Palace)
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://www.myhanoitours.com/wp-content/uploads/2017/06/Hanoi-in-the-past-days.jpg">
+            </div>
+            <p>After soaking in the tranquility of the lake, head to Phủ Tây Hồ, a temple dedicated to the Mother Goddess. Known for bringing luck and prosperity to those who visit, the temple is a significant spiritual site for locals and offers a peaceful atmosphere to reflect and pray.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Võng Thị Village
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://www.myhanoitours.com/wp-content/uploads/2017/06/Hanoi-in-the-past-days.jpg">
+            </div>
+            <p>For a taste of traditional Hanoi, venture into Võng Thị Village, where narrow alleys and ancient houses transport you back to a quieter time. The village is a peaceful retreat from the city’s fast pace, offering a glimpse into the old way of life in Hanoi.</p>
+            </div>
+
+{% endblock %}
+{% block title2 %}DONG DA AND ITS ATTRACTIONS{% endblock %}

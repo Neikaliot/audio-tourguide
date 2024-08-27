@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tay Ho</title>
+</head>
+<link rel="stylesheet" href="static/css/tayho.css">
+<body>
+    <div class="wrapper">
+        <nav class="hero">
+            <ul class="topnav">
+                {% for item in menu %}
+                    <li class="hideOnMobile"><a href={{item.url}}> {{ item.name }}</a></li>
+                {% endfor %}
+
+                <li class="menu-button" onclick=showSidebar()><a href=#><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidenav">
+                <li onclick=hideSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                {% for item in menu %}
+                <li><a href={{item.url}}> {{ item.name }}</a></li>
+                {% endfor %}
+
+            </ul>
+        </nav>
+        <div class="top">
+            <div class="hero-text">
+                <p class="logo" id="logo">TAY HO</p>
+                
+            </div>
+        </div>
+        <div class="container">
+            <div class="sections">
+              <div class="option" id="du_lich" onclick="window.location.href='tayhoattractions'">attractions</div>
+              <div class="option" id="an_uong" onclick="window.location.href='tayhofood'">food</div>
+            </div>
+          </div>
+    </div>
+    
+    <script>
+        function showSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='flex'
+        }
+
+        function hideSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='none'
+        }
+    </script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector(".topnav");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+    <script>
+        document.addEventListener('scroll', function() {
+            
+            const scrollPosition = window.scrollY;
+
+            
+            const newlogo = 20 - scrollPosition / 100 + 'rem';
+            
+
+            
+            document.getElementById('logo').style.fontSize = newlogo;
+            
+        });
+    </script>
+ <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; kien's corporation </p>
+    </div>
+  </footer>
+</body>
+</html>

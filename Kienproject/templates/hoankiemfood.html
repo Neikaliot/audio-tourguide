@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Hoan Kiem's cuisine{% endblock %}
+{% block top %}
+<div class="top" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://tiki.vn/blog/wp-content/uploads/2023/07/thumb-12.jpg);
+background-position: center;
+background-size: cover;">
+    <div class="hero-text">
+        <p class="logo" id="logo" onclick="window.location.href='hoankiem'" style="cursor: pointer;">HOAN KIEM</p>
+        <audio id="song">
+            <source src="audio/hanoian.mp3" type="audio/mpeg">
+        </audio>
+        <div id="scroll" onclick="scrolldown()">
+            <div class="play" onclick="playPause()" ><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block category %}CATEGORY: HOAN KIEM'S CUISINE{% endblock %}
+{% block content %}
+<p><h1>Hoàn Kiếm District: Where Tradition Meets Modern Hanoi
+</h1></p>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://cdn.britannica.com/13/84813-050-0F92B7CD/Turtle-Island-Hanoi-Lake-Hoan-Kiem.jpg">
+            </div>
+            <p>At the heart of Hanoi, Hoàn Kiếm district is a blend of history, culture, and the city’s vibrant urban life. From historic landmarks to bustling streets, this district embodies the essence of Hanoi.</p>
+            <div class="transcript">
+                <h2 class="subtitle">Phở Thìn</h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTte984GWKfZ9ILqPzggyX0O0zBJgiS299SUw&s">
+            </div>
+            <p>Start your culinary journey in Hoàn Kiếm with a visit to Phở Thìn on Lò Đúc street, one of Hanoi’s most famous phở shops. Known for its rich, flavorful broth and tender slices of beef, Phở Thìn serves a bowl of phở that’s both comforting and satisfying. The secret to its robust flavor lies in the slow-cooked bone broth and the freshness of the herbs and noodles. A bowl of phở here is the perfect introduction to Hanoi’s culinary heritage.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Bánh Mì 25
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPxF28XChisZNoJxIGPtKiacNLmdymwSRU3A&s">
+            </div>
+            <p>For a quick and delicious snack, stop by Bánh Mì 25, a humble yet highly popular stall serving Vietnam’s iconic baguette sandwich. The crisp, freshly baked bread is filled with a variety of meats, from grilled pork to pâté, along with pickled vegetables, fresh herbs, and a touch of chili sauce. Each bite is a flavorful combination of textures and tastes, making it a perfect meal on the go as you explore the district.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Kem Tràng Tiền
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://nhn.1cdn.vn/2021/09/27/nhipsonghanoi-hanoimoi-com-vn-kem-ttien.jpg">
+            </div>
+            <p>Cool off with a visit to Kem Tràng Tiền, a legendary ice cream shop that has been a local favorite since 1958. Whether you prefer traditional flavors like coconut or something more adventurous like green bean, each cone of ice cream is rich and creamy, offering the perfect sweet treat after a day of exploring the city. Located near Hoàn Kiếm Lake, it’s a popular stop for both locals and tourists alike.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Chè Bốn Mùa
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://static.riviu.co/960/image/2021/01/21/313e02ce0a2ae812dc0384dda32635c4_output.jpeg">
+            </div>
+            <p>Lastly, satisfy your sweet tooth with a visit to Chè Bốn Mùa, a beloved dessert spot in Hoàn Kiếm. Here, you’ll find a variety of traditional Vietnamese sweet soups, known as chè. From sticky rice with coconut to refreshing iced treats with beans and jelly, each dessert offers a unique combination of flavors and textures. Whether you’re in the mood for something light or indulgent, Chè Bốn Mùa has a treat for every taste.</p>
+            </div>
+
+{% endblock %}
+{% block title2 %}DONG DA AND ITS ATTRACTIONS{% endblock %}
