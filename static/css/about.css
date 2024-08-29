@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.wrapper{
+    position: relative;
+}
+@font-face {
+    font-family: 'lemonmilk';
+    src: url('https://raw.githubusercontent.com/Neikaliot/audio_tour/main/font/LEMONMILK-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: 'hanoipho';
+    src: url('https://raw.githubusercontent.com/Neikaliot/audio_tour/main/font/DVN-HaNoiPho.ttf') format('truetype');
+}
+
+.top{
+    width:auto;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://images.pexels.com/photos/1437618/pexels-photo-1437618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-size: cover;
+    height:30vh ;
+    display: flex;
+    align-items: center;
+
+}
+
+nav{
+    top:0;
+    transition: 0.6s;
+}
+.topnav.sticky{
+    transition: background-color 1.5s transform 1.5s ease-in-out;
+    background-color: black;
+}
+nav ul{
+    list-style-type: none;
+    position: relative;
+    display: flex;
+}
+.topnav{
+    transition:0.6s;
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 10vh;
+    align-items: center;
+    margin: 0;
+
+}
+
+.about{
+    padding-right: 3rem;
+}
+nav ul a{
+    color:white;
+    font-size:1.2rem;
+    letter-spacing: 0.2rem;
+    margin-right:3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+}
+
+nav.black{
+    min-height: 12vh;
+    background:black;
+}
+nav ul :hover{
+    color: darkgray;
+}
+
+.hero-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.logo{
+    font-weight: bold;
+    color: white;
+    font-family: 'hanoipho';
+    letter-spacing: 1.2vw;
+    font-size: 8rem;
+    
+}
+
+.p2{
+    font-size:1.5rem;
+    font-weight: lighter;
+    color: gray;
+    text-align: center;
+    height: 2vw;
+    padding-bottom: 2vw;
+}
+
+.sidenav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000000;
+    background-color: black;
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidenav li{
+    width: 100%;
+    padding:30px 10px 30px;
+}
+.sidenav a{
+    width: 100%;
+}
+.sidenav li:hover{
+    background-color: gray;
+}
+.menu-button{
+    display: none;
+}
+
+
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+     }
+    .menu-button{
+        display:block;
+    }
+    .topnav.sticky{
+        background-color: transparent;
+    }
+    .hero-text .dscrpt{
+        text-align: center;
+    }
+    .p2 {
+        display: none !important;
+    }
+    #bot{
+        height: 15vh;
+    }
+}
+@media(max-width:450px){
+    .sidenav{
+        width: 100vw;
+    }
+    .logo{
+        font-size: 10rem;
+    }
+    .p2{
+        display: none !important;
+    }
+
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    font-family: 'lemonmilk';
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+  }
+  
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#progress{
+    -webkit-appearance: none;
+    width: 80%;
+    height: 3px;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: black;
+    border: 2px solid gray;
+    width: 7.5px ;
+    height: 7.5px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(225, 26, 26, 0.22);
+}
+
+.play{
+    width: 4rem;
+    height: 4rem;  
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(1.5);
+    margin-top: 2rem;
+    margin-bottom:3rem;  
+}
+
+#ctrlIcon{
+    transform: scale(1.5);
+}
+.transcript{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.transcript p{
+    width: 70%;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 25;
+    margin-bottom: 1rem;
+}
+
+#bot{
+    display: none;
+    width: 100%;
+    min-height: 10vh;
+    background-color: black;
+    position: fixed;
+    z-index: 1000000;
+    bottom: 0;
+}
+.contentbot{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.contentbot div{
+    margin-bottom: 0.5rem;
+}
+
+#botplay{
+    color: black;
+    transform: scale(0.75);
+}
+
+.botplay{
+    border-radius: 50%;
+    background: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.title p{
+    font-family: 'lemonmilk';
+    font-size: 0.8rem;
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+.transcript h1{
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+.readmore{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.readbutton{
+    border: 2px solid lightgrey;
+    width: 7rem;
+    font-size: 0.8rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    cursor: pointer;   
+    margin-bottom: 1rem; 
+}
+
+.readbutton:hover{
+    border: 2px solid #A0522D;
+    color: #A0522D;
+}
+
+#exitbutton{
+    color: white;
+}
+
+.exit{
+    align-self: flex-end;
+    justify-self: flex-start;
+    right: 1rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#exitbutton:hover{
+    color: gray;
+}
+
+.img{
+    margin-bottom: 1rem;
+    height: auto;
+    max-width: 100%;
+}
+
+.thumbnail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.subtitle{
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.title2{
+    height: auto;
+    max-width: 100%;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    padding-bottom: 10px;
+}
+.title2 p{
+    color: black;
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    font-weight: bolder;
+}
+
+
+.h{
+    height: 1px;
+    width: 4rem;
+    background:lightgray;
+    border: none;
+}
+.readmore.expanded {
+    display: block;
+}
+.bigcontent {
+    display: flex;
+    flex-direction: column;
+}
+
+.readmore--show{
+    display: flex;
+}
+
+.body{
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
+}
+
+.people{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+
+}
+.person{
+    width: 12vw;
+    height: 20vw;
+    border: 1px solid black ;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: lemonmilk;
+    padding: 0.2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%); 
+}
+
+.person:hover{
+    transform: scale(1.05);
+}
+
+.descript{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    text-align: center;
+    width: 80vw;
+    font-family: lemonmilk;
+    font-size: small;
+    letter-spacing: 0.1rem;
+}
+
+

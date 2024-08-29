@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Dong Da's attractions{% endblock %}
+{% block top %}
+<div class="top" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://lh4.googleusercontent.com/proxy/jqVfDmU4Wx1VnrIU0f2tv6TnMM2rl4QYMajYYMHzc-8TfjMVNF5-cR4Wuqz6oZqrujXMA3zAQj5Jj_oZbo5NgcMYdtvNmICkMvG7ohp9YMvDOgfI4yvGqbkMQkPTvn9CbYK0);
+background-position: center;
+background-size: cover;" >
+    <div class="hero-text">
+        <p class="logo" id="logo" onclick="window.location.href='dongda'" style="cursor: pointer;">DONG DA</p>
+        <audio id="song">
+            <source src="audio/hanoian.mp3" type="audio/mpeg">
+        </audio>
+        <div id="scroll" onclick="scrolldown()">
+            <div class="play" onclick="playPause()" ><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block category %}CATEGORY: DONG DA'S CUISINE{% endblock %}
+{% block content %}
+<p><h1>Discover Đống Đa District: History, Culture, and Local Flavors
+</h1></p>
+            <p>The Đống Đa district is rich in historical significance and cultural heritage, blending the old and new into a fascinating journey through Hanoi's past and present.</p>
+            <div class="transcript">
+                <h2 class="subtitle">Pate Cột Đèn - 2 Tôn Đức Thắng</h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://github.com/Neikaliot/audio-tourguide/blob/main/Kienproject/photos/patecotden.jpg?raw=true">
+            </div>
+            <p>Pate Cột Đèn has long been a famous street food destination for locals and tourists alike. This small yet bustling eatery specializes in crispy baguettes filled with rich and savory pate, butter, and a mix of cold cuts, delivering an explosion of flavors. The shop has been around for decades and is known for its secret pate recipe passed down through generations. You can also add pickles and chili sauce for an extra kick.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Nem Chua Rán Ngõ Chợ - 230 Ng. Chợ Khâm Thiên, Trung Phụng
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://cdn.tgdd.vn/Files/2022/09/13/1468177/dung-bo-lo-21-quan-an-ngon-quan-dong-da-cuc-noi-tieng-202211101419058329.jpg">
+            </div>
+            <p>Nem Chua Rán Ngõ Chợ is a hidden gem nestled within Đống Đa district, offering some of the best-fried fermented pork rolls in Hanoi. The rolls are crispy on the outside, chewy and flavorful on the inside, and typically served with chili sauce. The bustling atmosphere of this food alley, packed with small street vendors, makes it a lively stop for both locals and tourists looking to enjoy a snack or meal in a casual setting.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Bánh Đa Cua Hải Phòng - 5 Đặng Văn Ngữ
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/285659604_121494043896702_4336767250720585687_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rNl4xxdC9ZMQ7kNvgF26HCm&_nc_ht=scontent.fhan2-5.fna&oh=00_AYD3TunAziOgP52jp1LI4A-MiS08ERzoGmlYDHiSw_qanQ&oe=66D49D4F">
+            </div>
+            <p>Specializing in the distinctive flavors of Hải Phòng cuisine, this restaurant is known for its delicious bánh đa cua, a noodle soup featuring crab broth, wide rice noodles, and various toppings such as crab meat, pork, tofu, and greens. The taste is bold, savory, and satisfying, offering a perfect meal for food lovers who want to try something different from the usual Hanoi phở.</p>
+            </div>
+{% endblock %}
+{% block title2 %}DONG DA'S CUISINE{% endblock %}

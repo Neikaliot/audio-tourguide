@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoian - Hanoi Audio Tourguide</title>
+    <link rel="stylesheet" href="static/css/about.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="hero">
+            <ul class="topnav">
+                {% for item in menu %}
+                <li class="hideOnMobile"><a href={{item.url}}> {{ item.name }}</a></li>
+                {% endfor %}
+
+                <li class="menu-button" onclick=showSidebar()><a href=#><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidenav">
+                <li onclick=hideSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                {% for item in menu %}
+                <li><a href={{item.url}}> {{ item.name }}</a></li>
+                {% endfor %}
+
+            </ul>
+        </nav>
+        <div class="top">
+            <div class="hero-text">
+                <p class="logo" id="logo">ABOUT US</p>
+            </div>
+        </div>
+        <div class="body">
+            <div class="people">
+                <div class="person" data-url="{{ url_for('redirect_to_page', page_name='person1') }}">PHI VINH KIEN</div>
+                <div class="person" data-url="{{ url_for('redirect_to_page', page_name='person2') }}">HOANG HAI ANH</div>
+                <div class="person" data-url="{{ url_for('redirect_to_page', page_name='person3') }}">NGUYEN DUC MINH</div>
+                <div class="person" data-url="{{ url_for('redirect_to_page', page_name='person4') }}">TRINH LE HA ANH</div>
+                <div class="person" data-url="{{ url_for('redirect_to_page', page_name='person5') }}">NGUYEN THI MINH PHUONG</div>
+                <div class="person" data-url="{{ url_for('redirect_to_page', page_name='person6') }}">NGUYEN LAM TUE</div>
+            </div>  
+        </div>
+        
+        <div class="descript">
+            <p class="text">A team of Vietnamese students created an audio tour guide website for Hanoi, offering immersive narratives that bring the city's history, culture, and unique locations to life. The platform focuses exclusively on providing high-quality audio content, allowing users to enjoy engaging stories and insights as they explore the city at their own pace. The project highlights the students' dedication to using technology to showcase Hanoi's vibrant heritage.</p>
+        </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+        
+        function showSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='flex'
+        }
+
+        function hideSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='none'
+        }
+
+    </script>    
+    <script type="text/javascript">
+       window.addEventListener("scroll", function(){
+           var header = document.querySelector(".topnav");
+           header.classList.toggle("sticky", window.scrollY > 0);
+       })
+    </script>
+    <script>
+        document.addEventListener('scroll', function() {
+            
+            const scrollPosition = window.scrollY;
+
+            
+            const newlogo = 8 - scrollPosition / 150 + 'rem';
+            const newp2 = 1.5 - scrollPosition / 1500 + 'rem';
+            const newp2padding = 2 - scrollPosition / 200 + 'vw';
+
+            
+            document.getElementById('logo').style.fontSize = newlogo;
+            document.getElementById('p2').style.fontSize = newp2;
+            document.getElementById('p2').style.paddingBottom = newp2padding;
+        });
+    </script>
+    <script>
+        let progress = document.getElementById("progress")
+        let song = document.getElementById("song");
+        let ctrlIcon = document.getElementById("ctrlIcon")
+        const bot = document.getElementById("bot")
+
+        song.onloadedmetadata = function(){
+            progress.max=song.duration;
+            progress.value=song.currentTime;
+        }
+
+        function scrolldown(){
+            document.getElementById("transcript").scrollIntoView({behavior:"smooth"})
+        }
+
+        function playPause(){
+            var header = document.querySelector('.topnav')
+            header.style.display="none"
+            bot.style.display="block"
+            if(ctrlIcon.classList.contains("fa-pause") && botplay.classList.contains("fa-pause")){
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+                botplay.classList.remove("fa-pause");
+                botplay.classList.add("fa-play");
+            }
+            else{
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+                botplay.classList.add("fa-pause");
+                botplay.classList.remove("fa-play");
+            }
+        }
+
+        function hidebot(){
+            var header = document.querySelector('.topnav');
+            header.style.display="flex";
+            song.pause();
+            bot.style.display="none";
+        }
+
+
+        if(song.play()){
+            setInterval(()=>{
+                progress.value = song.currentTime;},500);
+            }
+
+        progress.onchange=function(){
+            song.play();
+            song.currentTime = progress.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+            botplay.classList.add("fa-pause");
+            botplay.classList.remove("fa-play");
+        }
+
+        const parentContainer=document.querySelector('.wrapper');
+        parentContainer.addEventListener('click', event=>{
+            const current = event.target;
+            const isReadMoreBtn = current.className.includes('readbutton');
+            if(!isReadMoreBtn) return;
+            const currentText = event.target.parentNode.querySelector('.readmore')
+            currentText.classList.toggle('readmore--show'); 
+            current.textContent = current.textContent.includes('READ MORE') ? "READ LESS" : "READ MORE";
+
+        })
+
+
+
+        
+
+
+
+    </script>
+    <script src="https://kit.fontawesome.com/cd4d23a63a.js" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.person').forEach(item => {
+            item.addEventListener('click', function() {
+                const url = this.getAttribute('data-url');
+                window.location.href = url;
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; kien's corporation </p>
+        </div>
+    </footer>
+</body>
+</html>

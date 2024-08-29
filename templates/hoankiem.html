@@ -1,0 +1,22 @@
+{% extends "districts.html" %}
+{% block title %}Hoan Kiem{% endblock %}
+{% block top %}
+<div class="top" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://static.vinwonders.com/production/ho-hoan-kiem-banner.jpg);
+background-position: center;
+background-size: cover;">
+    <div class="hero-text">
+        <p class="logo" id="logo">HOAN KIEM</p>        
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="option" id="du_lich" onclick="window.location.href='hoankiemattractions'" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://vcdn1-dulich.vnecdn.net/2023/08/11/ho-guom2-1691720338-9273-1691720402.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=zCv2PBVWCn31OOZfKg6-9g);
+background-size: cover;
+background-position: center 80%;">attractions</div>
+<div class="option" id="an_uong" onclick="window.location.href='hoankiemfood'" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://tiki.vn/blog/wp-content/uploads/2023/07/thumb-12.jpg);
+background-size: cover;
+background-position: center;">food</div>
+{% endblock %}

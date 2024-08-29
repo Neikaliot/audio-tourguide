@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Tay Ho's cuisine{% endblock %}
+{% block top %}
+<div class="top" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://static.kinhtedothi.vn/w960/images/upload/2024/04/23/banh-tom-ho-tay-banner.jpg);
+background-position: center;
+background-size: cover;" >
+    <div class="hero-text">
+        <p class="logo" id="logo" onclick="window.location.href='tayho'" style="cursor: pointer;">TAY HO</p>
+        <audio id="song">
+            <source src="audio/hanoian.mp3" type="audio/mpeg">
+        </audio>
+        <div id="scroll" onclick="scrolldown()">
+            <div class="play" onclick="playPause()" ><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block category %}CATEGORY: TAY HO'S CUISINE{% endblock %}
+{% block content %}
+<p><h1>Explore Tây Hồ District: A Journey Through Hanoi's Scenic and Culinary Highlights
+</h1></p>
+            <p>Tây Hồ district, one of Hanoi's most vibrant areas, offers stunning lake views, rich history, and an array of delicious street food. It’s a perfect blend of culture, nature, and local cuisine that invites you to discover the best of what Hanoi has to offer.</p>
+            
+            <div class="transcript">
+                <h2 class="subtitle">Bánh Tôm Hồ Tây - Phủ Tây Hồ
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://toquoc.mediacdn.vn/upload/oldcinetvn/userfiles/image/2013/254.jpg">
+            </div>
+            <p>When in Tây Hồ, make sure to try Bánh Tôm Hồ Tây, the district’s famed crispy shrimp cakes. This delightful dish consists of freshly caught shrimp, fried in a crispy batter, and served hot and golden brown. The cakes are crunchy on the outside and tender inside, making them the ideal snack as you stroll along the lake. Pair it with a cool drink, and you'll have the perfect lakeside treat.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Ốc Nóng Thụy Khuê - 107 Thụy Khuê, Tây Hồ, Hanoi
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://static.vinwonders.com/production/an-gi-o-ho-tay-3.jpg">
+            </div>
+            <p>For something more local and full of flavor, Ốc Nóng Thụy Khuê is the place to satisfy your craving for Vietnamese-style snails. This little roadside spot specializes in hot snails, served with a variety of dipping sauces, fresh herbs, and spices. The dish is cooked to order, ensuring you get a piping hot bowl of savory goodness. It’s a fun spot for a more casual meal where you can experience the bold, tangy flavors of traditional snail dishes that are beloved by the locals.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Bánh Rán Mặn Võng Thị - 242A Lạc Long Quân, Tây Hồ, Hanoi
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://static.vinwonders.com/production/an-gi-o-ho-tay-4.jpg">
+            </div>
+            <p>This spot is famous for its crispy Bánh Rán Mặn—deep-fried savory rice cakes stuffed with a flavorful filling of pork, mushrooms, and glass noodles. The crunchy exterior gives way to a tasty and juicy center, making it a perfect snack or light meal. Locals line up here for this iconic street food, especially in the late afternoon. It’s a simple but deeply satisfying bite, offering a taste of Hanoi’s everyday food culture.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Bánh Cuốn Nóng Thụy Khuê - 151 Thụy Khuê, Tây Hồ, Hanoi
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://static.vinwonders.com/production/an-gi-o-ho-tay-7.jpg">
+            </div>
+            <p>Bánh Cuốn Nóng is another street food staple in Hanoi, and this spot on Thụy Khuê does it just right. The dish features thin, steamed rice rolls filled with ground pork and wood ear mushrooms, served hot and fresh with a side of Vietnamese sausage (chả lụa) and a dipping sauce. The rice rolls are soft and delicate, with just the right balance of flavors, making it a perfect breakfast or lunch choice. The atmosphere is casual, but the food is top-notch, giving you a real taste of traditional Hanoi.</p>
+            </div>
+{% endblock %}
+{% block title2 %}TAY HO'S CUISINE{% endblock %}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanoian - Hanoi Audio Tourguide</title>
+    <link rel="stylesheet" href="static/css/history.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="hero">
+            <ul class="topnav">
+                {% for item in menu %}
+                <li class="hideOnMobile"><a href={{item.url}}> {{ item.name }}</a></li>
+                {% endfor %}
+
+                <li class="menu-button" onclick=showSidebar()><a href=#><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="sidenav">
+                <li onclick=hideSidebar()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                {% for item in menu %}
+                <li><a href={{item.url}}> {{ item.name }}</a></li>
+                {% endfor %}
+
+            </ul>
+        </nav>
+        <div class="top">
+            <div class="hero-text">
+                <p class="logo" id="logo">HISTORY</p>
+                <audio id="song">
+                    <source src="Kienproject/audio/hanoian.mp3" type="audio/mpeg">
+                </audio>
+                <div id="scroll" onclick="scrolldown()">
+                    <div class="play" onclick="playPause()" ><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="transcript">
+            <div class="title2">
+                <p id="transcript" >CATEGORY: HANOI'S HISTORY</p>
+                <hr class="h">
+            </div>
+            <p><h1>  A Journey Through Time: The Rich History of Hanoi</h1></p>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://cdn.britannica.com/13/84813-050-0F92B7CD/Turtle-Island-Hanoi-Lake-Hoan-Kiem.jpg">
+            </div>
+            <p>Hanoi, the capital city of Vietnam, is a place where the past seamlessly blends with the present. From its ancient temples to French colonial architecture, and from bustling markets to serene lakes, Hanoi tells the story of a city that has witnessed and shaped history for over a thousand years. As you walk through its streets, you'll find yourself immersed in a vibrant tapestry of culture, tradition, and resilience. This article delves into the history of Hanoi, offering a glimpse into the fascinating past of this dynamic city.</p>
+            <div class="transcript">
+                <h2 class="subtitle">Ancient Beginnings: The Founding of Hanoi</h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://www.myhanoitours.com/wp-content/uploads/2017/06/Hanoi-in-the-past-days.jpg">
+            </div>
+            <p>Hanoi's history dates back over a millennium, with its origins rooted in the early days of Vietnamese civilization. The area where Hanoi now stands was first settled around 3,000 BC by the Red River Delta's indigenous people. However, it wasn't until 1010 AD that Hanoi truly began its journey as a significant political and cultural center.</p>
+            <div class="readmore">
+                <p>In 1010, Emperor Lý Thái Tổ of the Lý Dynasty moved the capital of Đại Việt (the ancient name of Vietnam) from Hoa Lư to this location and named it Thăng Long, meaning "Ascending Dragon." The decision was based on the city's strategic location, surrounded by rivers and fertile land, making it an ideal place for the kingdom's new capital. This event marked the beginning of Hanoi's rise as the heart of Vietnam.</p>
+            </div>
+            <div class="readbutton">READ MORE</div>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">The Lý and Trần Dynasties: A Flourishing Capital</h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://image.vietnamnews.vn/uploadvnnews/Article/2017/2/12/den-do71642719PM.jpg">
+            </div>
+            <p>During the Lý and Trần Dynasties (1010-1400), Thăng Long became a thriving center of culture, education, and religion. The city's layout was carefully planned, with a citadel at its core, surrounded by residential areas, markets, and temples. It was during this period that many of Hanoi's iconic landmarks were established, including the One Pillar Pagoda and the Temple of Literature, Vietnam's first university.</p>
+            <div class="readmore">
+                <p>The Lý Dynasty also introduced Buddhism as the state religion, leading to the construction of numerous pagodas and temples across the city. Thăng Long became a hub of religious activity, attracting scholars and monks from across the region.</p>
+
+            </div>
+            <div class="readbutton" >READ MORE</div>
+            </div>  
+            <div class="transcript">
+                <h2 class="subtitle">The Ming Occupation and the Rise of the Lê Dynasty</h2>
+                <div class="thumbnail">
+                    <img class="img" width="950" height="320" src="https://www.vietvisiontravel.com/wp-content/uploads/2016/04/tay-phuong-pagoda.jpg">
+                </div>
+                <p>In the early 15th century, Hanoi experienced a period of turmoil when the Ming Dynasty of China invaded and occupied the city. During this time, many cultural artifacts and historical records were destroyed, but the spirit of the Vietnamese people remained unbroken.</p>
+                <div class="readmore">
+                    <p>The Ming occupation lasted until 1428 when Lê Lợi, a national hero, led a successful uprising against the Chinese invaders, founding the Lê Dynasty. The new dynasty restored the city's original name, Thăng Long, and ushered in a period of reconstruction and prosperity. The Lê Dynasty is known for consolidating Vietnamese independence and reinforcing the cultural identity of the nation.</p>
+    
+                    
+                </div>
+            <div class="readbutton" >READ MORE</div>
+            </div>  
+            <div class="transcript">
+                <h2 class="subtitle">The Nguyễn Dynasty and the French Colonial Era</h2>
+                <div class="thumbnail">
+                    <img class="img" width="950" height="320" src="https://i.pinimg.com/736x/fb/a0/ec/fba0ec45bde755fd4fb60ab606fcf59a.jpg">
+                </div>
+                <p>In the 19th century, the Nguyễn Dynasty moved the capital to Huế, but Thăng Long, now known as Hanoi, remained an important administrative and cultural center. However, the city's fate took a significant turn in 1887 when it fell under French colonial rule.</p>
+                <div class="readmore">
+                    <p>The French transformed Hanoi into the capital of French Indochina, leaving a lasting impact on the city's architecture and urban planning. The French Quarter, with its wide boulevards, grand villas, and European-style buildings, stands as a testament to this period of Hanoi's history. Landmarks such as the Hanoi Opera House and St. Joseph's Cathedral are prominent examples of French colonial architecture that continue to define the city's landscape.</p>
+
+                    <p>Despite the challenges of colonial rule, Hanoi remained a symbol of Vietnamese resilience and nationalism. The city's intellectuals and revolutionaries played a crucial role in the struggle for independence, culminating in the August Revolution of 1945, which marked the end of French colonialism in Vietnam.
+
+                    </p>
+    
+                    
+                </div>
+            <div class="readbutton" >READ MORE</div>
+            </div>  
+            <div class="transcript">
+                <h2 class="subtitle">The Vietnam War and Reunification</h2>
+                <div class="thumbnail">
+                    <img class="img" width="950" height="320" src="https://onetripwithlocal.com/blog/wp-content/uploads/2022/11/vietnamwar.jpg">
+                </div>
+                <p>Hanoi's history took another dramatic turn during the Vietnam War, also known as the American War in Vietnam. As the capital of North Vietnam, Hanoi was the political and military headquarters of the communist government led by Ho Chi Minh. The city endured intense bombings and hardships during the war, but its people demonstrated remarkable resilience.</p>
+                <div class="readmore">
+                    <p>In 1975, after the fall of Saigon and the reunification of North and South Vietnam, Hanoi was declared the capital of the Socialist Republic of Vietnam. The city began a period of reconstruction and recovery, slowly transforming into the bustling metropolis it is today.</p>
+    
+                    
+                </div>
+            <div class="readbutton" >READ MORE</div>
+            </div>  
+            <div class="transcript">
+                <h2 class="subtitle">Modern Hanoi: A City of Contrasts</h2>
+                <div class="thumbnail">
+                    <img class="img" width="950" height="320" src="https://jackytravel.com/wp-content/uploads/2018/09/hanoi-old-quarter-1.jpg-1-1140x530.jpg">
+                </div>
+                <p>Today, Hanoi is a city of contrasts, where ancient temples stand alongside modern skyscrapers, and traditional markets coexist with trendy cafes. The city's rich history is reflected in its vibrant cultural scene, where traditional arts and crafts are celebrated alongside contemporary innovations.</p>
+                <div class="readmore">
+                    <p>Hanoi's Old Quarter, with its narrow streets and historic buildings, offers a glimpse into the city's past, while the West Lake area showcases its more modern side. The city's numerous museums, such as the Vietnam Museum of Ethnology and the Hoa Lo Prison Museum, provide valuable insights into its complex history.</p>
+    
+                    
+                </div>
+            <div class="readbutton" >READ MORE</div>
+            </div>  
+            <div class="transcript" id="conclusion">
+                <h2 class="subtitle">Conclusion</h2>
+                <p>As you explore Hanoi, you'll discover that its history is not just a series of events, but a living, breathing part of the city itself. Each street, building, and monument has a story to tell, contributing to the rich tapestry of Hanoi's past and present. Whether you're a history enthusiast or a curious traveler, Hanoi's history will captivate and inspire you, leaving you with a deeper appreciation for this remarkable city. So, put on your walking shoes, grab your audio tour guide, and embark on a journey through time in Hanoi – a city where history comes alive with every step you take.</p>
+                
+            </div>  
+        </div>
+        <div id="bot">
+            <div class="contentbot">
+                <div class="exit" onclick="hidebot()"><i class="fa-solid fa-x" id="exitbutton"></i></div>
+                <div class="title">
+                    <p id="title">"HANOI'S HISTORY"</p>
+                </div>
+                <div class="botplay" onclick="playPause()" ><i class="fa-solid fa-pause" id="botplay"></i></div>
+                <input type="range" value="0" id="progress">
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+        
+        function showSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='flex'
+        }
+
+        function hideSidebar(){
+            const sidebar=document.querySelector('.sidenav' )
+            sidebar.style.display='none'
+        }
+
+    </script>    
+    <script type="text/javascript">
+       window.addEventListener("scroll", function(){
+           var header = document.querySelector(".topnav");
+           header.classList.toggle("sticky", window.scrollY > 0);
+       })
+    </script>
+    <script>
+        document.addEventListener('scroll', function() {
+            
+            const scrollPosition = window.scrollY;
+
+            
+            const newlogo = 10 - scrollPosition / 150 + 'rem';
+            const newp2 = 1.5 - scrollPosition / 1500 + 'rem';
+            const newp2padding = 2 - scrollPosition / 200 + 'vw';
+
+            
+            document.getElementById('logo').style.fontSize = newlogo;
+            document.getElementById('p2').style.fontSize = newp2;
+            document.getElementById('p2').style.paddingBottom = newp2padding;
+        });
+    </script>
+    <script>
+        let progress = document.getElementById("progress")
+        let song = document.getElementById("song");
+        let ctrlIcon = document.getElementById("ctrlIcon")
+        const bot = document.getElementById("bot")
+
+        song.onloadedmetadata = function(){
+            progress.max=song.duration;
+            progress.value=song.currentTime;
+        }
+
+        function scrolldown(){
+            document.getElementById("transcript").scrollIntoView({behavior:"smooth"})
+        }
+
+        function playPause(){
+            var header = document.querySelector('.topnav')
+            header.style.display="none"
+            bot.style.display="block"
+            if(ctrlIcon.classList.contains("fa-pause") && botplay.classList.contains("fa-pause")){
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+                botplay.classList.remove("fa-pause");
+                botplay.classList.add("fa-play");
+            }
+            else{
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+                botplay.classList.add("fa-pause");
+                botplay.classList.remove("fa-play");
+            }
+        }
+
+        function hidebot(){
+            var header = document.querySelector('.topnav');
+            header.style.display="flex";
+            song.pause();
+            bot.style.display="none";
+        }
+
+
+        if(song.play()){
+            setInterval(()=>{
+                progress.value = song.currentTime;},500);
+            }
+
+        progress.onchange=function(){
+            song.play();
+            song.currentTime = progress.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+            botplay.classList.add("fa-pause");
+            botplay.classList.remove("fa-play");
+        }
+
+        const parentContainer=document.querySelector('.wrapper');
+        parentContainer.addEventListener('click', event=>{
+            const current = event.target;
+            const isReadMoreBtn = current.className.includes('readbutton');
+            if(!isReadMoreBtn) return;
+            const currentText = event.target.parentNode.querySelector('.readmore')
+            currentText.classList.toggle('readmore--show'); 
+            current.textContent = current.textContent.includes('READ MORE') ? "READ LESS" : "READ MORE";
+
+        })
+
+
+
+        
+
+
+
+    </script>
+    <script src="https://kit.fontawesome.com/cd4d23a63a.js" crossorigin="anonymous"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; kien's corporation </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Hoan Kiem's attractions{% endblock %}
+{% block top %}
+<div class="top" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://vcdn1-dulich.vnecdn.net/2023/08/11/ho-guom2-1691720338-9273-1691720402.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=zCv2PBVWCn31OOZfKg6-9g);
+background-position: center;
+background-size: cover;">
+    <div class="hero-text">
+        <p class="logo" id="logo" onclick="window.location.href='hoankiem'" style="cursor: pointer;">HOAN KIEM</p>
+        <audio id="song">
+            <source src="audio/hanoian.mp3" type="audio/mpeg">
+        </audio>
+        <div id="scroll" onclick="scrolldown()">
+            <div class="play" onclick="playPause()" ><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block category %}CATEGORY: HOAN KIEM'S ATTRACTIONS{% endblock %}
+{% block content %}
+<p><h1>Hoàn Kiếm District: Where Tradition Meets Modern Hanoi
+</h1></p>
+            <p>At the heart of Hanoi, Hoàn Kiếm district is a blend of history, culture, and the city’s vibrant urban life. From historic landmarks to bustling streets, this district embodies the essence of Hanoi.</p>
+            <div class="transcript">
+                <h2 class="subtitle">Hoàn Kiếm Lake</h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://github.com/Neikaliot/audio-tourguide/blob/main/Kienproject/photos/thaprua.jpg?raw=true">
+            </div>
+            <p>Start your journey at Hoàn Kiếm Lake, a tranquil spot steeped in legend. According to local lore, Emperor Lê Lợi returned a magical sword to a golden turtle in this lake, giving it the name ‘Lake of the Returned Sword.’ The picturesque walking paths around the lake are perfect for a morning or evening stroll, and the iconic Turtle Tower in the middle of the lake adds a mystical touch.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Hanoi Opera House
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://github.com/Neikaliot/audio-tourguide/blob/main/Kienproject/photos/nhahatlon.jpg?raw=true">
+            </div>
+            <p>The Hanoi Opera House is an architectural gem that stands as a symbol of French influence in Vietnam. Built in 1911, this grand building is modeled after the Palais Garnier in Paris and has become a cultural hub for art performances ranging from classical music to contemporary theater. A visit here isn’t just about watching a show; it’s about stepping into a piece of Hanoi’s colonial history. Even if you don’t catch a performance, the exterior of the building is worth admiring for its ornate detailing and European flair.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Old Quarter (Phố Cổ)
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/e5/7a/42/caption.jpg?w=1200&h=-1&s=1">
+            </div>
+            <p>Next, lose yourself in the charm of Hanoi’s Old Quarter. Famous for its 36 streets, each named after traditional trades like silver, silk, or herbs, the Old Quarter is a maze of narrow, bustling streets where history and modern life coexist. Explore the local shops, cafes, and street food stalls that give this area its lively atmosphere.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Railway Street
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="475" height="320" src="https://github.com/Neikaliot/audio-tourguide/blob/main/Kienproject/photos/railway2.jpg?raw=true">
+            </div>
+            <p>Tucked away in the old quarter is the fascinating Railway Street, where trains pass incredibly close to homes and cafes. The train tracks cut through narrow alleys, with buildings on both sides almost touching the train as it rumbles by. Locals live and work right beside the tracks, and visitors often gather to take photos or grab a coffee while waiting for the train to pass. It’s a unique experience that shows the seamless integration of modern transportation with traditional life in the heart of Hanoi.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Lý Thái Tổ Statue and Park
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="475" height="320" src="https://github.com/Neikaliot/audio-tourguide/blob/main/Kienproject/photos/lythaito.jpg?raw=true">
+            </div>
+            <p>Lý Thái Tổ, the founder of Hanoi, stands proudly in the form of a statue in a park near Hoàn Kiếm Lake. This space is a favorite for locals and tourists alike, offering a place to rest, people-watch, or join in group exercises. The statue represents Hanoi’s deep history and its connection to the Lý Dynasty, which helped establish the city as the capital of Vietnam. The park is particularly lively during festivals and weekends, where you can catch cultural performances or simply soak in the vibrant atmosphere.</p>
+            </div>
+            
+
+{% endblock %}
+{% block title2 %}HOAN KIEM'S ATTRACTIONS{% endblock %}

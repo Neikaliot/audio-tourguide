@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Dong Da's attractions{% endblock %}
+{% block top %}
+<div class="top" style="
+background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://lh4.googleusercontent.com/proxy/jqVfDmU4Wx1VnrIU0f2tv6TnMM2rl4QYMajYYMHzc-8TfjMVNF5-cR4Wuqz6oZqrujXMA3zAQj5Jj_oZbo5NgcMYdtvNmICkMvG7ohp9YMvDOgfI4yvGqbkMQkPTvn9CbYK0);
+background-position: center;
+background-size: cover;" >
+    <div class="hero-text">
+        <p class="logo" id="logo" onclick="window.location.href='dongda'" style="cursor: pointer;">DONG DA</p>
+        <audio id="song">
+            <source src="audio/hanoian.mp3" type="audio/mpeg">
+        </audio>
+        <div id="scroll" onclick="scrolldown()">
+            <div class="play" onclick="playPause()" ><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block category %}CATEGORY: DONG DA'S ATTRACTIONS{% endblock %}
+{% block content %}
+<p><h1>Discover Đống Đa District: History, Culture, and Local Flavors
+</h1></p>
+            <p>The Đống Đa district is rich in historical significance and cultural heritage, blending the old and new into a fascinating journey through Hanoi's past and present.</p>
+            <div class="transcript">
+                <h2 class="subtitle">Temple of Literature (Văn Miếu - Quốc Tử Giám)</h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg">
+            </div>
+            <p>Your exploration of Đống Đa begins at the Temple of Literature, Vietnam's first university, established in 1070 and dedicated to Confucius. The serene courtyards and ancient statues offer a tranquil escape from the city’s bustle, providing a fascinating glimpse into Vietnam's academic traditions and Confucian philosophy.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Đống Đa Mound (Gò Đống Đa)
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/472187uUZ/kham-pha-go-dong-da-ha-noi-kham-pha-di-tich-lich-su-quoc-gia-hap-dan">
+            </div>
+            <p>Not far from the Temple of Literature is Đống Đa Mound, a historical site commemorating the decisive victory of the Tây Sơn army against Chinese invaders in 1789. The park features statues and monuments honoring the heroes of this battle, making it a solemn place for reflection and learning about Vietnam’s military history.</p>
+            </div>
+            <div class="transcript">
+                <h2 class="subtitle">Hanoi Railway Station
+                </h2>
+            <div class="thumbnail">
+                <img class="img" width="950" height="320" src="https://static.vinwonders.com/production/ga-hang-co-0.jpg">
+            </div>
+            <p>Although primarily a transportation hub, Hanoi Railway Station in Đống Đa holds a rich history. It was established during the French colonial period and has become one of the city's most iconic buildings. The station also plays a central role in Hanoi’s cultural and social development, with a charming atmosphere that harks back to earlier decades.</p>
+            </div>
+{% endblock %}
+{% block title2 %}DONG DA'S ATTRACTIONS{% endblock %}
