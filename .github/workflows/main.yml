@@ -4,12 +4,10 @@ on:
   # Runs on push to any of the below branches
   push:
     branches: 
-      - master
       - main
   # Runs on pull request events that target one of the below branches
   pull_request:
     branches: 
-      - master
       - main
 
   # Allows you to run this workflow manually from the Actions tab of the repository
@@ -50,12 +48,6 @@ jobs:
       uses: subosito/flutter-action@v2
       with:
         flutter-version: ${{ env.FLUTTER_VERSION }}
-
-    - name: Flet Build Web
-      run: |
-            echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}, USER: ${GITHUB_REPOSITORY%/*}, PROJECT_BASE_URL: ${GITHUB_REPOSITORY#*/}"
-            flutter config --no-analytics
-            flet build web --base-url ${GITHUB_REPOSITORY#*/} --route-url-strategy hash
 
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v3
